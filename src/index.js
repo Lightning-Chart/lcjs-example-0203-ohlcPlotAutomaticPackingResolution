@@ -1,4 +1,4 @@
-/**
+/*
  * LightningChartJS example that showcases the 'packing resolution' property of StockSeries.
  */
 // Import LightningChartJS
@@ -17,12 +17,21 @@ const {
     createProgressiveTraceGenerator
 } = require('@arction/xydata')
 
+const container = document.createElement('div')
+container.id = 'lcjs-chart-container'
+container.style.display = 'flex'
+container.style.flexDirection = 'column'
+container.style.height = '100%'
+
 const div1 = document.createElement('div')
 div1.id = 'div1'
-document.body.appendChild(div1)
+div1.style.height = '100%'
+container.appendChild(div1)
 const div2 = document.createElement('div')
 div2.id = 'div2'
-document.body.appendChild(div2)
+div2.style.height = '100%'
+container.appendChild(div2)
+document.body.appendChild(container)
 
 const dataSpan = 60 * 60 * 1000
 const dataFrequency = 1 * 1000
@@ -33,10 +42,8 @@ const dateTimeTickStrategy = AxisTickStrategies.DateTime(dateOrigin)
 
 // Create charts and series for two different packing resolutions.
 const lc = lightningChart()
-const chartHeight = window.innerHeight * .5
 const chartDefault = lc.ChartXY({
     containerId: 'div1',
-    height: chartHeight,
     defaultAxisXTickStrategy: dateTimeTickStrategy
 })
     .setTitle('Default packing resolution')
@@ -55,7 +62,6 @@ chartDefault.getDefaultAxisY()
 
 const chartLow = lc.ChartXY({
     containerId: 'div2',
-    height: chartHeight,
     defaultAxisXTickStrategy: dateTimeTickStrategy
 })
     .setTitle('Very small packing resolution')

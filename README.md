@@ -1,4 +1,4 @@
-# OHLC series automatic packing resolution
+# OHLC Series Automatic Packing Resolution
 
 This demo application belongs to the set of examples for LightningChart JS, data visualization library for JavaScript.
 
@@ -14,9 +14,10 @@ The demo can be used as an example or a seed project. Local execution requires t
 
 - The application is available at *http://localhost:8080* in your browser, webpack-dev-server provides hot reload functionality.
 
-### Description
 
-The examples purpose is to shed some light on the packing logic of OHLCSeriesWithAutomaticPacking and how it can be fit to users needs by usage of method: 'setPackingResolution'.
+## Description
+
+The examples purpose is to shed some light on the packing logic of OHLCSeriesWithAutomaticPacking and how it can be fit to users needs by usage of method: `setPackingResolution`.
 
 This class is a variant of OHLCSeries, which adds the automatic packing of XY-points to XOHLC-points. In a nutshell, when pushing points, it simply packages these points into 'XOHLC'-objects at certain intervals (which is controlled by the packing resolution property). 
 
@@ -28,16 +29,17 @@ To ensure that the figures can be zoomed up to desired details, users can set an
 
 ![](./assets/ohlcPackingResolution.png)
 
-### API links
 
-* Axis tick strategies: [AxisTickStrategies][]
-* XY cartesian chart: [ChartXY][]
-* OHLC series types: [OHLCSeriesTypes][]
-* OHLC-series with automatic packing: [OHLCSeriesWithAutomaticPacking][]
-* Progressive trace generator: [ProgressiveTraceGenerator][]
+## API Links
+
+* Axis tick strategies: [AxisTickStrategies]
+* XY cartesian chart: [ChartXY]
+* OHLC series types: [OHLCSeriesTypes]
+* series with automatic packing: [OHLCSeriesWithAutomaticPacking]
+* Progressive trace generator: [ProgressiveTraceGenerator]
 
 
-### Support
+## Support
 
 If you notice an error in the example code, please open an issue on [GitHub][0] repository of the entire example.
 
@@ -49,16 +51,18 @@ If you think you found a bug in the LightningChart JavaScript library, please co
 
 Direct developer email support can be purchased through a [Support Plan][4] or by contacting sales@arction.com.
 
-© Arction Ltd 2009-2019. All rights reserved.
-
 [0]: https://github.com/Arction/
 [1]: https://www.arction.com/lightningchart-js-api-documentation/
 [2]: https://www.arction.com
 [3]: https://stackoverflow.com/questions/tagged/lightningchart
 [4]: https://www.arction.com/support-services/
 
-[AxisTickStrategies]: https://www.arction.com/lightningchart-js-api-documentation/v1.1.0/globals.html#axistickstrategies
-[ChartXY]: https://www.arction.com/lightningchart-js-api-documentation/v1.1.0/classes/chartxy.html
-[OHLCSeriesTypes]: https://www.arction.com/lightningchart-js-api-documentation/v1.1.0/globals.html#ohlcseriestypes
-[OHLCSeriesWithAutomaticPacking]: https://www.arction.com/lightningchart-js-api-documentation/v1.1.0/classes/ohlcserieswithautomaticpacking.html
-[ProgressiveTraceGenerator]: https://arction.github.io/xydata/classes/progressivetracegenerator.html
+© Arction Ltd 2009-2019. All rights reserved.
+
+
+[AxisTickStrategies]: https://www.arction.com/lightningchart-js-api-documentation/v1.2.0/globals.html#axistickstrategies
+[ChartXY]: https://www.arction.com/lightningchart-js-api-documentation/v1.2.0/classes/chartxy.html
+[OHLCSeriesTypes]: https://www.arction.com/lightningchart-js-api-documentation/v1.2.0/globals.html#ohlcseriestypes
+[OHLCSeriesWithAutomaticPacking]: https://www.arction.com/lightningchart-js-api-documentation/v1.2.0/classes/ohlcserieswithautomaticpacking.html
+[ProgressiveTraceGenerator]: https://arction.github.io/xydata/classes/progressivetracegenerator.html
+
