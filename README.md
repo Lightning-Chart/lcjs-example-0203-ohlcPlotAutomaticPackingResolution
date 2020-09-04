@@ -34,11 +34,11 @@ To ensure that the figures can be zoomed up to desired details, users can set an
 
 ## API Links
 
-* Axis tick strategies: [AxisTickStrategies]
-* XY cartesian chart: [ChartXY]
-* OHLC series types: [OHLCSeriesTypes]
-* series with automatic packing: [OHLCSeriesWithAutomaticPacking]
-* Progressive trace generator: [ProgressiveTraceGenerator]
+* [Axis tick strategies]
+* [XY cartesian chart]
+* [OHLC series types]
+* [series with automatic packing]
+* [Progressive trace generator]
 
 
 ## Support
@@ -62,9 +62,9 @@ Direct developer email support can be purchased through a [Support Plan][4] or b
 © Arction Ltd 2009-2020. All rights reserved.
 
 
-[AxisTickStrategies]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/globals.html#axistickstrategies
-[ChartXY]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/chartxy.html
-[OHLCSeriesTypes]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/globals.html#ohlcseriestypes
-[OHLCSeriesWithAutomaticPacking]: https://www.arction.com/lightningchart-js-api-documentation/v1.3.0/classes/ohlcserieswithautomaticpacking.html
-[ProgressiveTraceGenerator]: https://arction.github.io/xydata/classes/progressivetracegenerator.html
+[Axis tick strategies]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/globals.html#axistickstrategies
+[XY cartesian chart]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/classes/chartxy.html
+[OHLC series types]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/globals.html#ohlcseriestypes
+[series with automatic packing]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/classes/ohlcserieswithautomaticpacking.html
+[Progressive trace generator]: https://arction.github.io/xydata/classes/progressivetracegenerator.html
 

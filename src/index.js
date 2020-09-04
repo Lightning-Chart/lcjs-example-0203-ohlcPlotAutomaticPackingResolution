@@ -9,7 +9,8 @@ const {
     lightningChart,
     AxisTickStrategies,
     OHLCSeriesTypes,
-    emptyLine
+    emptyLine,
+    Themes
 } = lcjs
 
 // Import data-generator from 'xydata'-library.
@@ -38,41 +39,57 @@ const dataFrequency = 1 * 1000
 
 // Decide on an origin for DateTime axis.
 const dateOrigin = new Date(2018, 0, 1)
-const dateTimeTickStrategy = AxisTickStrategies.DateTime(dateOrigin)
-
 // Create charts and series for two different packing resolutions.
 const lc = lightningChart()
 const chartDefault = lc.ChartXY({
-    containerId: 'div1',
-    defaultAxisXTickStrategy: dateTimeTickStrategy
+    container: 'div1',
+    // theme: Themes.dark
 })
+// Use DateTime TickStrategy with custom origin date.
+chartDefault
+    .getDefaultAxisX()
+    .setTickStrategy(
+        AxisTickStrategies.DateTime,
+        (tickStrategy) => tickStrategy.setDateOrigin(dateOrigin)
+    )
+
+chartDefault
     .setTitle('Default packing resolution')
     .setAutoCursor(cursor => {
         cursor.disposeTickMarkerY()
         cursor.setGridStrokeYStyle(emptyLine)
     })
-    // Preventing ResultTable from getting cut at the edge
-    .setPadding({
-        right: 42
-    })
+// Preventing ResultTable from getting cut at the edge
+chartDefault.setPadding({
+    right: 42
+})
 
 // show title 'USD on Y axis
 chartDefault.getDefaultAxisY()
     .setTitle('USD')
 
 const chartLow = lc.ChartXY({
-    containerId: 'div2',
-    defaultAxisXTickStrategy: dateTimeTickStrategy
+    container: div2,
+    // theme: Themes.dark
 })
+// Use DateTime TickStrategy with custom origin date.
+chartLow
+    .getDefaultAxisX()
+    .setTickStrategy(
+        AxisTickStrategies.DateTime,
+        (tickStrategy) => tickStrategy.setDateOrigin(dateOrigin)
+    )
+
+chartLow
     .setTitle('Very small packing resolution')
     .setAutoCursor(cursor => {
         cursor.disposeTickMarkerY()
         cursor.setGridStrokeYStyle(emptyLine)
     })
-    // Preventing ResultTable from getting cut at the edge
-    .setPadding({
-        right: 42
-    })
+// Preventing ResultTable from getting cut at the edge
+chartLow.setPadding({
+    right: 42
+})
 
 // show title 'USD on Y axis
 chartLow.getDefaultAxisY()
