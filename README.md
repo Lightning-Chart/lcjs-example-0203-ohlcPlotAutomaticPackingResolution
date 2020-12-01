@@ -37,7 +37,7 @@ To ensure that the figures can be zoomed up to desired details, users can set an
 * [Axis tick strategies]
 * [XY cartesian chart]
 * [OHLC series types]
-* [series with automatic packing]
+* [Series with automatic packing]
 * [Progressive trace generator]
 
 
@@ -62,9 +62,9 @@ Direct developer email support can be purchased through a [Support Plan][4] or b
 © Arction Ltd 2009-2020. All rights reserved.
 
 
-[Axis tick strategies]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/globals.html#axistickstrategies
-[XY cartesian chart]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/classes/chartxy.html
-[OHLC series types]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/globals.html#ohlcseriestypes
-[series with automatic packing]: https://www.arction.com/lightningchart-js-api-documentation/v2.0.0/classes/ohlcserieswithautomaticpacking.html
+[Axis tick strategies]: https://www.arction.com/lightningchart-js-api-documentation/v2.1.0/globals.html#axistickstrategies
+[XY cartesian chart]: https://www.arction.com/lightningchart-js-api-documentation/v2.1.0/classes/chartxy.html
+[OHLC series types]: https://www.arction.com/lightningchart-js-api-documentation/v2.1.0/globals.html#ohlcseriestypes
+[Series with automatic packing]: https://www.arction.com/lightningchart-js-api-documentation/v2.1.0/classes/ohlcserieswithautomaticpacking.html
 [Progressive trace generator]: https://arction.github.io/xydata/classes/progressivetracegenerator.html
 
