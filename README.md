@@ -1,6 +1,6 @@
-# OHLC Series Automatic Packing Resolution
+# JavaScript OHLC Chart with Automatic Packing Resolution
 
-![OHLC Series Automatic Packing Resolution](ohlcAutomaticPackingResolution.png)
+![JavaScript OHLC Chart with Automatic Packing Resolution](ohlcAutomaticPackingResolution.png)
 
 This demo application belongs to the set of examples for LightningChart JS, data visualization library for JavaScript.
 
