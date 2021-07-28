@@ -18,32 +18,17 @@ const {
     createProgressiveTraceGenerator
 } = require('@arction/xydata')
 
-const container = document.createElement('div')
-container.id = 'lcjs-chart-container'
-container.style.display = 'flex'
-container.style.flexDirection = 'column'
-container.style.height = '100%'
-
-const div1 = document.createElement('div')
-div1.id = 'div1'
-div1.style.height = '100%'
-container.appendChild(div1)
-const div2 = document.createElement('div')
-div2.id = 'div2'
-div2.style.height = '100%'
-container.appendChild(div2)
-document.body.appendChild(container)
-
 const dataSpan = 60 * 60 * 1000
 const dataFrequency = 1 * 1000
 
 // Decide on an origin for DateTime axis.
 const dateOrigin = new Date(2018, 0, 1)
 // Create charts and series for two different packing resolutions.
-const lc = lightningChart()
-const chartDefault = lc.ChartXY({
-    container: 'div1',
-    // theme: Themes.dark
+const dashboard = lightningChart().Dashboard({numberOfColumns: 1, numberOfRows: 2})
+const chartDefault = dashboard.createChartXY({
+    columnIndex: 0,
+    rowIndex: 0,
+    // theme: Themes.darkGold
 })
 // Use DateTime TickStrategy with custom origin date.
 chartDefault
@@ -68,9 +53,10 @@ chartDefault.setPadding({
 chartDefault.getDefaultAxisY()
     .setTitle('USD')
 
-const chartLow = lc.ChartXY({
-    container: div2,
-    // theme: Themes.dark
+const chartLow = dashboard.createChartXY({
+    columnIndex: 0,
+    rowIndex: 1,
+    // theme: Themes.darkGold
 })
 // Use DateTime TickStrategy with custom origin date.
 chartLow
