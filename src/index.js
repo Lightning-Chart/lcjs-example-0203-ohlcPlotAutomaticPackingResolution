@@ -13,11 +13,10 @@ const { lightningChart, AxisTickStrategies, OHLCSeriesTypes, emptyLine, Themes }
 // Import data-generator from 'xydata'-library.
 const { createProgressiveTraceGenerator } = xydata
 
-const dataSpan = 60 * 60 * 1000
-const dataFrequency = 1 * 1000
-
 // Decide on an origin for DateTime axis.
 const dateOrigin = new Date(2018, 0, 1)
+const dateOriginTime = dateOrigin.getTime()
+
 // Create charts and series for two different packing resolutions.
 const dashboard = lightningChart().Dashboard({ numberOfColumns: 1, numberOfRows: 2 })
 const chartDefault = dashboard.createChartXY({
@@ -67,6 +66,9 @@ const seriesDefault = chartDefault
     )
     .setName('Default packing resolution')
 
+const dataSpan = 60 * 60 * 1000
+const dataFrequency = 1 * 1000
+
 const seriesLow = chartLow
     .addOHLCSeries({ seriesConstructor: OHLCSeriesTypes.AutomaticPacking })
     .setName('Very small packing resolution')
@@ -74,14 +76,21 @@ const seriesLow = chartLow
     // (essentially allows users to zoom to full resolution)
     .setPackingResolution(dataFrequency)
 
-// Push points to both series.
-createProgressiveTraceGenerator()
+createProgressiveTraceGenerator() // Generating random progressive xy data
     .setNumberOfPoints(dataSpan / dataFrequency)
     .generate()
     .toPromise()
+    // Map random generated data to start from a particular date with the frequency of dataFrequency
     .then((data) =>
         data.map((p) => ({
-            x: p.x * dataFrequency,
+            x: dateOriginTime + p.x * dataFrequency,
+            y: p.y,
+        })),
+    )
+    // When data origin is used (required for DateTime axis range smaller than 1 day), time coordinate has to be shifted by date origin.
+    .then((data) =>
+        data.map((p) => ({
+            x: p.x - dateOriginTime,
             y: p.y,
         })),
     )
