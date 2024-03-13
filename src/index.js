@@ -23,7 +23,7 @@ const dashboard = lightningChart().Dashboard({ numberOfColumns: 1, numberOfRows:
 const chartDefault = dashboard.createChartXY({
     columnIndex: 0,
     rowIndex: 0,
-    // theme: Themes.darkGold
+    theme: Themes[new URLSearchParams(window.location.search).get('theme') || 'darkGold'] || undefined,
 })
 // Use DateTime TickStrategy with custom origin date.
 chartDefault.getDefaultAxisX().setTickStrategy(AxisTickStrategies.DateTime, (tickStrategy) => tickStrategy.setDateOrigin(dateOrigin))
