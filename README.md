@@ -62,9 +62,9 @@ Direct developer email support can be purchased through a [Support Plan][4] or b
 © LightningChart Ltd 2009-2022. All rights reserved.
 
 
-[Axis tick strategies]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/variables/AxisTickStrategies.html
-[XY cartesian chart]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/classes/ChartXY.html
-[OHLC series types]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/variables/OHLCSeriesTypes.html
-[Series with automatic packing]: https://lightningchart.com/js-charts/api-documentation/v5.1.0/classes/OHLCSeriesWithAutomaticPacking.html
+[Axis tick strategies]: https://lightningchart.com/js-charts/api-documentation/v5.2.0/variables/AxisTickStrategies.html
+[XY cartesian chart]: https://lightningchart.com/js-charts/api-documentation/v5.2.0/classes/ChartXY.html
+[OHLC series types]: https://lightningchart.com/js-charts/api-documentation/v5.2.0/variables/OHLCSeriesTypes.html
+[Series with automatic packing]: https://lightningchart.com/js-charts/api-documentation/v5.2.0/classes/OHLCSeriesWithAutomaticPacking.html
 [Progressive trace generator]: https://arction.github.io/xydata/classes/progressivetracegenerator.html
 
