@@ -2,10 +2,10 @@
  * LightningChartJS example that showcases the 'packing resolution' property of StockSeries.
  */
 // Import LightningChartJS
-const lcjs = require('@arction/lcjs')
+const lcjs = require('@lightningchart/lcjs')
 
 // Import xydata
-const xydata = require('@arction/xydata')
+const xydata = require('@lightningchart/xydata')
 
 // Extract required parts from LightningChartJS.
 const { lightningChart, AxisTickStrategies, OHLCSeriesTypes, emptyLine, Themes } = lcjs
@@ -30,7 +30,7 @@ const chartDefault = dashboard.createChartXY({
 // Use DateTime TickStrategy with custom origin date.
 chartDefault.getDefaultAxisX().setTickStrategy(AxisTickStrategies.DateTime, (tickStrategy) => tickStrategy.setDateOrigin(dateOrigin))
 
-chartDefault.setTitle('Default packing resolution').setAutoCursor((cursor) => {
+chartDefault.setTitle('Default packing resolution').setCursor((cursor) => {
     cursor.setTickMarkerYVisible(false)
     cursor.setGridStrokeYStyle(emptyLine)
 })
@@ -50,7 +50,7 @@ const chartLow = dashboard.createChartXY({
 // Use DateTime TickStrategy with custom origin date.
 chartLow.getDefaultAxisX().setTickStrategy(AxisTickStrategies.DateTime, (tickStrategy) => tickStrategy.setDateOrigin(dateOrigin))
 
-chartLow.setTitle('Very small packing resolution').setAutoCursor((cursor) => {
+chartLow.setTitle('Very small packing resolution').setCursor((cursor) => {
     cursor.setTickMarkerYVisible(false)
     cursor.setGridStrokeYStyle(emptyLine)
 })
