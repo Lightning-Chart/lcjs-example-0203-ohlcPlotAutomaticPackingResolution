@@ -23,6 +23,7 @@ const dashboard = lightningChart({
             resourcesBaseUrl: new URL(document.head.baseURI).origin + new URL(document.head.baseURI).pathname + 'resources/',
         }).Dashboard({ numberOfColumns: 1, numberOfRows: 2 })
 const chartDefault = dashboard.createChartXY({
+    legend: { visible: false },
     columnIndex: 0,
     rowIndex: 0,
     theme: Themes[new URLSearchParams(window.location.search).get('theme') || 'darkGold'] || undefined,
@@ -43,6 +44,7 @@ chartDefault.setPadding({
 chartDefault.getDefaultAxisY().setTitle('USD')
 
 const chartLow = dashboard.createChartXY({
+    legend: { visible: false },
     columnIndex: 0,
     rowIndex: 1,
     // theme: Themes.darkGold
@@ -77,7 +79,7 @@ const seriesLow = chartLow
     .setName('Very small packing resolution')
     // Set packing resolution that is equal to the minimum resolution between two points.
     // (essentially allows users to zoom to full resolution)
-    .setPackingResolution(dataFrequency)
+    // .setPackingResolution(dataFrequency)
 
 createProgressiveTraceGenerator() // Generating random progressive xy data
     .setNumberOfPoints(dataSpan / dataFrequency)
