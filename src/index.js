@@ -18,7 +18,7 @@ const dateOrigin = new Date(2018, 0, 1)
 const dateOriginTime = dateOrigin.getTime()
 
 // Create charts and series for two different packing resolutions.
-// NOTE: Using `Dashboard` is no longer recommended for new applications. Find latest recommendations here: https://lightningchart.com/js-charts/docs/basic-topics/grouping-charts/
+// NOTE: Using `Dashboard` is no longer recommended for new applications. Find latest recommendations here: https://lightningchart.com/js-charts/docs/more-guides/grouping-charts/
 const dashboard = lightningChart({
             resourcesBaseUrl: new URL(document.head.baseURI).origin + new URL(document.head.baseURI).pathname + 'resources/',
         }).Dashboard({ numberOfColumns: 1, numberOfRows: 2 })
