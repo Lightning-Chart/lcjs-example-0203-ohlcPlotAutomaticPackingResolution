@@ -29,7 +29,7 @@ To ensure that the figures can be zoomed up to desired details, users can set an
 
 [//]: # 'IMPORTANT: The assets will not show before README.md is built - relative path is different!'
 
-![](./assets/ohlcPackingResolution.png)
+![OHLC packing resolution](./assets/ohlcPackingResolution.png)
 
 
 ## API Links
